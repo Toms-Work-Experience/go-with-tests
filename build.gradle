@@ -1,0 +1,108 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = mod_id
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: minecraft_version
+
+    copyIdeResources = true
+
+    runs {
+        configureEach {
+            workingDirectory project.file('run')
+            property 'forge.logging.console.level', 'debug'
+            mods {
+                "${mod_id}" {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        client {
+            property 'forge.enabledGameTestNamespaces', mod_id
+        }
+
+        server {
+            property 'forge.enabledGameTestNamespaces', mod_id
+            args '--nogui'
+        }
+    }
+}
+
+repositories {
+    maven { url = 'https://maven.minecraftforge.net' }
+    maven { url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    mavenCentral()
+    flatDir {
+        dirs '.'
+    }
+}
+
+configurations {
+    wheelCompileOnly
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    implementation fg.deobf(files('geckolib-forge-1.20.1-4.8.4.jar'))
+    implementation fg.deobf(files('curios-forge-5.14.1+1.20.1.jar'))
+    implementation fg.deobf(files('Pehkui-3.8.2+1.20.1-forge.jar'))
+    // Wheel is compile-only; its classes are merged into the output jar below
+    compileOnly files('mahoragawheel-1.0.2.jar')
+    // CursedFate is compile-only; merged into output jar below
+    compileOnly files('cursedfate-1.0.39.jar')
+    // CursedFate runtime deps — present as separate JARs in the mods folder
+    compileOnly files('kleiders_custom_renderer-7.4.1-forge-1.20.1.jar')
+    compileOnly files('photon-forge-1.20.1-1.1.17.jar')
+    compileOnly files('player-animation-lib-forge-1.0.2-rc1+1.20.jar')
+}
+
+// Merge wheel mod classes + assets into our output jar
+jar {
+    from(zipTree('mahoragawheel-1.0.2.jar')) {
+        exclude 'META-INF/MANIFEST.MF'
+        exclude 'META-INF/mods.toml'
+        exclude 'pack.mcmeta'
+        // suppress any duplicate entry warnings from the wheel's identical assets
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+    // Merge CursedFate classes + assets (mods.toml declared in our own mods.toml)
+    from(zipTree('cursedfate-1.0.39.jar')) {
+        exclude 'META-INF/MANIFEST.MF'
+        exclude 'META-INF/mods.toml'
+        exclude 'pack.mcmeta'
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+}
+
+tasks.withType(ProcessResources).configureEach {
+    var replaceProperties = [
+            minecraft_version: minecraft_version,
+            forge_version: forge_version,
+            mod_id: mod_id,
+            mod_name: mod_name,
+            mod_license: mod_license,
+            mod_version: mod_version
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
+        expand replaceProperties + [project: project]
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

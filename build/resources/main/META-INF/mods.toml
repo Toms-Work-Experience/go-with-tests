@@ -1,0 +1,102 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="thetenabysses"
+version="1.0.0"
+displayName="The Ten Abysses"
+authors="PassiveHydra972, Abyssal Modder"
+description='''
+The Ten Abysses - a standalone Ten Shadows inspired mod that reuses permitted Sorcery Age assets.
+Made by PassiveHydra972/Abyssal Modder.
+'''
+
+[[dependencies.thetenabysses]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.thetenabysses]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[mods]]
+modId="mahoragawheel"
+version="1.0.2"
+displayName="Mahoraga Wheel"
+authors="PassiveHydra972, Abyssal Modder"
+description='''
+Mahoraga Wheel - bundled inside The Ten Abysses.
+'''
+
+[[dependencies.mahoragawheel]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.mahoragawheel]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[mods]]
+modId="cursedfate"
+version="1.0.39"
+displayName="Cursed Fate"
+authors="ImNotHURAGAN, Gumel"
+description='''
+Cursed Fate - bundled inside The Ten Abysses.
+'''
+
+[[dependencies.cursedfate]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.cursedfate]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.cursedfate]]
+modId="photon"
+mandatory=true
+versionRange="[0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.cursedfate]]
+modId="kleiders_custom_renderer"
+mandatory=true
+versionRange="[0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.cursedfate]]
+modId="geckolib"
+mandatory=true
+versionRange="[0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.cursedfate]]
+modId="playeranimator"
+mandatory=true
+versionRange="[0,)"
+ordering="NONE"
+side="BOTH"
+

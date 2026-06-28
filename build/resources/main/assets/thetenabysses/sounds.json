@@ -1,0 +1,65 @@
+{
+    "mahoraga.summon": {
+        "sounds": [
+            {
+                "name": "thetenabysses:entity/mahoraga_summon",
+                "stream": true,
+                "volume": 1.0
+            }
+        ]
+    },
+    "mahoraga.wheel": {
+        "sounds": [
+            {
+                "name": "thetenabysses:jjk/wheel",
+                "stream": false,
+                "volume": 1.0
+            }
+        ]
+    },
+    "mahoraga.slam": {
+        "sounds": [
+            {
+                "name": "thetenabysses:jjk/slam",
+                "stream": false,
+                "volume": 1.0
+            }
+        ]
+    },
+    "dog.howl": {
+        "sounds": [
+            {
+                "name": "thetenabysses:jjk/wolf_howling",
+                "stream": false,
+                "volume": 1.0
+            }
+        ]
+    },
+    "nue.electric": {
+        "sounds": [
+            {
+                "name": "thetenabysses:jjk/electricity",
+                "stream": false,
+                "volume": 1.0
+            }
+        ]
+    },
+    "agito.spark": {
+        "sounds": [
+            {
+                "name": "thetenabysses:jjk/spark",
+                "stream": false,
+                "volume": 1.0
+            }
+        ]
+    },
+    "shikigami.slash": {
+        "sounds": [
+            {
+                "name": "thetenabysses:jjk/slash",
+                "stream": false,
+                "volume": 1.0
+            }
+        ]
+    }
+}
