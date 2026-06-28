@@ -1,0 +1,16 @@
+{
+    "mod_name": "Mahoraga Wheel",
+    "mod_id": "mahoragawheel",
+    "minecraft_version": "1.20.1",
+    "loader": "Forge",
+    "authors": [
+        "YourNameHere",
+        "OtherNameHere"
+    ],
+    "dependencies": [],
+    "version": "1.0.2",
+    "description": "Example mod description.\nNewline characters can be used and will be replaced properly.",
+    "jar_name": "mahoragawheel-1.0.2.jar",
+    "date_imported": "2026-06-28T01:28:22.819936",
+    "decompiler": "Vineflower"
+}

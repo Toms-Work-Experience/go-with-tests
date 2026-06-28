@@ -1,0 +1,12 @@
+{
+  "adaptation_spin": {
+    "category": "player",
+    "subtitle": "subtitles.mahoragawheel.adaptation_spin",
+    "sounds": [
+      {
+        "name": "mahoragawheel:adaptation_spin",
+        "stream": false
+      }
+    ]
+  }
+}

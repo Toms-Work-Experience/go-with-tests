@@ -1,0 +1,29 @@
+==============================================================
+  PROJECT DECOM — IMPORT REPORT
+==============================================================
+  Generated : 2026-06-28 01:28:22
+
+  MOD INFORMATION
+  ----------------------------------------------------------
+  Mod Name          : Mahoraga Wheel
+  Mod ID            : mahoragawheel
+  Version           : 1.0.2
+  Minecraft Version : 1.20.1
+  Loader            : Forge
+  Authors           : YourNameHere, OtherNameHere
+  JAR File          : mahoragawheel-1.0.2.jar
+  Decompiler        : Vineflower
+
+  FILE STATISTICS
+  ----------------------------------------------------------
+  Textures Found    : 2
+  Models Found      : 1
+  Sounds Found      : 1
+  Java Classes      : 27
+  Recipes           : 1
+  Loot Tables       : 0
+  Lang Files        : 1
+  Config Files      : 0
+
+  STATUS: Import completed successfully with no issues.
+==============================================================

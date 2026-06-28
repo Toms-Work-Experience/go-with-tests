@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: mahoragawheel
+Specification-Vendor: YourNameHere, OtherNameHere
+Specification-Version: 1
+Implementation-Title: forgemdk
+Implementation-Version: 1.0.2
+Implementation-Vendor: YourNameHere, OtherNameHere
+Implementation-Timestamp: 2026-04-30T16:43:23+0300
+
